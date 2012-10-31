@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap-handlebars",
+  "description": "Handlebars template package for Bootstrap components.",
+  "homepage": "https://github.com/richardbutler/bootstrap-handlebars",
+  "author": "Richard Butler",
+  "version": "0.1.0",
+  "git": "https://github.com/richardbutler/bootstrap-handlebars.git",
+  "packages": {
+    "bootstrap": "*"
+  }
+}

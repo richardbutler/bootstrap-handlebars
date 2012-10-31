@@ -1,0 +1,32 @@
+<template name="_dropdown">
+  <div class="dropdown {{class}}">
+    <button
+      class="btn dropdown-toggle"
+      data-toggle="dropdown"
+      >
+      {{label}}
+      <span class="caret"></span>
+    </button>
+    {{dropdownMenu items=items}}
+  </div>
+</template>
+
+<template name="_dropdownMenu">
+  <ul
+    class="dropdown-menu {{class}}"
+    role="menu"
+    >
+    {{#each items}}
+      {{>_dropdownMenuItem}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="_dropdownMenuItem">
+  <li{{#if items}} class="dropdown-submenu"{{/if}}>
+    <a tabindex="-1" href="{{#if href}}{{href}}{{else}}#{{/if}}">{{label}}</a>
+    {{#if items}}
+      {{dropdownMenu class="dropdown-submenu" items=items}}
+    {{/if}}
+  </li>
+</template>

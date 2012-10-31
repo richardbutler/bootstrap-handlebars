@@ -1,0 +1,19 @@
+<template name="_buttonToolbar">
+  <div class="btn-toolbar {{class}}">
+    {{#each items}}
+      {{buttonGroup items=this}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="_buttonGroup">
+  <div class="btn-group {{class}}">
+    {{#each items}}
+      {{button}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="_button">
+  <button class="btn {{class}}">{{label}}</button>
+</template>

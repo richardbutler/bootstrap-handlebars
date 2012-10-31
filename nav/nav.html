@@ -1,0 +1,11 @@
+<template name="_tabs">
+  <ul class="nav nav-tabs">
+    {{#each items}}
+      <li
+        {{isActive item=this active=../active}}
+        >
+        <a href="{{#if href}}{{href}}{{else}}#{{/if}}">{{label}}</a>
+      </li>
+    {{/each}}
+  </ul>
+</template>
